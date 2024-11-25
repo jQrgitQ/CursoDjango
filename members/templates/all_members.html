@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "master.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        Get Members
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1>Members</h1>
+    <p><a href="/">HOME</a></p>
+    <ul>
+    {% for x in mymembers %}
+    <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+
+</body>
+</html>
