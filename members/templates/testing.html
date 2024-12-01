@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends "master.html" %}
+<html lang="en">
+<head>
+    {% block title %}
+        Fruits
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+
+    {% for x in fruits %}
+        <h1>{{ x }}</h1>
+    {% endfor %}
+
+
+{% endblock %}
+
+</body>
+</html>
