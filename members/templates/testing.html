@@ -9,11 +9,27 @@
 <body>
 {% block content %}
 
-    {% for x in fruits %}
-        <h1>{{ x }}</h1>
-    {% endfor %}
+    {% comment "this was the original welcome message" %}
+    <h1>Welcome ladies and gentlemen</h1>
+    {% endcomment %}
 
+    {# ... #}
 
+    {% include 'footer.html' with fruits=fruits %}
+
+    {% comment %}
+    <ul>
+  {% for x in fruits %}
+    <li
+      {% if forloop.last %}
+        style='background-color:lightblue;'
+      {% endif %}
+    >{{ x }}</li>
+  {% endfor %}
+</ul>
+    {% endcomment %}
+
+    <h1>PEPE</h1>
 {% endblock %}
 
 </body>
