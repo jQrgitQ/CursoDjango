@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     ##"members.apps.MembersConfig"
     'members'
 
+
 ]
 
 MIDDLEWARE = [

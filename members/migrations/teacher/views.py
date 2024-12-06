@@ -2,9 +2,9 @@ from unittest import loader
 
 from django.http import HttpResponse
 
-from members.models.teacher.models import Teacher
+from members.modelos.teacher.models import Teacher
 
-
+"""
 def get_teachers(request):
   #template = loader.get_template('myfirst.html')
   #return HttpResponse(template.render())
@@ -15,3 +15,5 @@ def get_teachers(request):
     'teachers': teachers,
   }
   return HttpResponse(template.render(context, request))
+  
+"""
