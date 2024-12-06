@@ -5,14 +5,12 @@
     <title>Footer</title>
 </head>
 <body>
-    <p>You have reached the bottom of this page, thank you for your time.</p>
     <ul>
-  {% for x in fruits %}
-    <li
-      {% if forloop.last %}
-        style='background-color:lightblue;'
-      {% endif %}
-    >{{ x }}</li>
+  {% for x in mymembers %}
+      <li>Firsname: {{ x.firstname }}</li>
+      <li>Lastname: {{ x.lastname }}</li>
+      <li>Phone: {{ x.phone }}</li>
+      <p></p>
   {% endfor %}
     </ul>
 </body>

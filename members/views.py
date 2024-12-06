@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import loader
@@ -32,7 +33,8 @@ def main(request):
 
 def testing(request):
   template = loader.get_template('testing.html')
+  mymembers = Member.objects.all().order_by('firstname').values()
   context = {
-    'fruits': ['apple','orange','pear'],
+    'mymembers': mymembers,
   }
   return HttpResponse(template.render(context, request))
