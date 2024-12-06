@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "master.html" %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% block title %}
+        Teachers
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+        {% for x in teachers %}
+            <p>Firstname: {x.firstname}</p>
+            <p>Lastname: {x.lastname}</p>
+        {% endfor %}
+    {% endblock content %}
+
+</body>
+</html>
